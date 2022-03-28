@@ -1,0 +1,95 @@
+//All animations
+
+//creates a pulse effect when harmburger is opening
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0px rgba($color: #ffffff, $alpha: 0.6);
+
+    background: rgba($color: #ffffff, $alpha: 0.6);
+  }
+
+  to {
+    box-shadow: 0 0 0 1000px rgba($color: #ffffff, $alpha: 0);
+
+    background: rgba($color: #ffffff, $alpha: 0);
+  }
+}
+
+//creates transition when opening & closing the harmburger
+@keyframes openTop {
+  0% {
+    transform: translateY(-5) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+// @keyframes closeTop {
+//   0% {
+//     transform: translateY(-5) rotate(0deg);
+//   }
+//   50% {
+//     transform: translateY(0) rotate(0deg);
+//   }
+//   100% {
+//     transform: translateY(0) rotate(90deg);
+//   }
+// }
+
+//no need for 0% because it doesnot have to collapse
+//no need for translate just rotate
+@keyframes openMid {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+// @keyframes closeMid {
+//   50% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(45deg);
+//   }
+// }
+
+@keyframes openBottom {
+  0% {
+    transform: translateY(5) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+// @keyframes closeBottom {
+//   0% {
+//     transform: translateY(5) rotate(0deg);
+//   }
+//   50% {
+//     transform: translateY(0) rotate(0deg);
+//   }
+//   100% {
+//     transform: translateY(0) rotate(90deg);
+//   }
+// }
+
+/* Fading animation */
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

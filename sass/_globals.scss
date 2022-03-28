@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@300;400&display=swap");
+:root {
+  --pink: #f564a9;
+  --green: #0aa656;
+  --rasinblack: #2d2a32;
+  --richblack: #071013;
+  --white: white;
+  --grainbrow: #dfe0e2;
+  --card_width: 250px;
+  --card_border_radius: 16px;
+  --row_increment: 10px;
+  --card_medium: 33;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.green {
+  color: var(--green);
+}
+
+.pink {
+  color: var(--pink);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.3;
+  background-color: var(--richblack);
+  color: var(--grainbrow);
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grainbrow);
+
+  &:hover {
+    color: var(--pink);
+  }
+
+  &:active {
+    color: var(--green);
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: 800;
+  padding: 0.8rem 2.5rem;
+  border-radius: 5px;
+  color: var(--grainbrow);
+  cursor: pointer;
+
+  &__pink {
+    background-color: var(--pink);
+    border: 1px solid var(--pink);
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__green {
+    border: 1px solid var(--green);
+    color: var(--green);
+    background-color: transparent;
+    text-transform: capitalize;
+    font-weight: bold;
+
+    &:hover {
+      background-color: var(--green);
+      color: var(--grainbrow);
+    }
+  }
+}
+
+.bg-pink {
+  background-color: var(--pink);
+}
+
+.bg-green {
+  background-color: var(--green);
+}

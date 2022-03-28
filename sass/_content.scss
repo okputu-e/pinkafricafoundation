@@ -1,0 +1,294 @@
+section {
+  .content {
+    &__inner {
+      width: 90%;
+      margin: 2rem auto;
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0%;
+          width: 5rem;
+          height: 3px;
+          background: var(--pink);
+          border-radius: 20px;
+        }
+      }
+
+      .core_values {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > div {
+          border: 1px solid var(--rasinblack);
+          margin: 1rem;
+          width: 300px;
+          height: 120px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          > div {
+            margin: 0.5rem;
+
+            &.text {
+              p {
+                font-size: 1rem;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      .about {
+        padding: 5rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        &__image {
+          border: 1px solid white;
+          border-radius: 0 20% 0 20%;
+          flex-basis: 40%;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        &__content {
+          flex-basis: 50%;
+          padding: 0 6rem 4rem 0;
+          font-weight: 400;
+
+          .about_text {
+            p {
+              line-height: 1.6;
+              margin: 0.5rem 0;
+            }
+            margin-bottom: 2.5rem;
+          }
+
+          a {
+            display: inline-block;
+          }
+        }
+      }
+      .events {
+        &__main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 4rem;
+
+          .event {
+            border: 1px solid var(--rasinblack);
+            width: 500px;
+            height: 300px;
+            margin: 0 0.5rem;
+
+            &__image {
+              border: 1px solid var(--rasinblack);
+              img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                object-position: top center;
+              }
+            }
+
+            &__details {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0.5rem;
+
+              h4 {
+                color: var(--green);
+              }
+              i {
+                color: var(--pink);
+              }
+            }
+          }
+        }
+        &__button {
+          text-align: right;
+        }
+      }
+      .volunteer {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 600px;
+        margin: 6rem auto;
+
+        h3 {
+          padding: 0;
+          margin: 0;
+          font-size: 2.5rem;
+          &::before {
+            display: none;
+          }
+        }
+
+        p {
+          margin: 2rem 0 4rem;
+        }
+
+        div.buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .gallery {
+        position: relative;
+        width: 100%;
+        margin-bottom: 4rem;
+        &__images {
+          margin-bottom: 3rem;
+          border: 1px solid var(--rasinblack);
+          display: grid;
+
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .images {
+            img {
+              width: 100%;
+              height: 250px;
+              object-fit: cover;
+              object-position: 20% 20%;
+            }
+          }
+        }
+        &__button {
+          text-align: right;
+        }
+      }
+
+      .contact {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__form {
+          .form-item {
+            width: 500px;
+            margin: 0.8rem 0;
+
+            input {
+              margin-top: 0.5rem;
+            }
+
+            input,
+            textarea {
+              width: 100%;
+              padding: 0.8rem 0;
+            }
+          }
+        }
+
+        &__map {
+          .mapouter {
+            position: relative;
+            text-align: right;
+            height: 500px;
+            width: 500px;
+
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 100%;
+              width: 100%;
+
+              iframe {
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .volunteer_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem 0;
+
+        form {
+          .form-item {
+            margin: 0.8rem 0;
+
+            input,
+            textarea {
+              width: 100%;
+              padding: 0.8rem 0;
+              margin-top: 0.5rem;
+            }
+          }
+
+          .form-btn {
+            text-align: right;
+          }
+        }
+      }
+      .donate {
+        margin-bottom: 3rem;
+        width: 100%;
+
+        &__card {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .card-container {
+            &__inner {
+              width: 300px;
+              height: 350px;
+              border: 1px solid var(--pink);
+              background-color: var(--rasinblack);
+              border-radius: 1rem;
+              padding: 1rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              text-align: center;
+              margin: 1rem auto;
+
+              .card-head {
+                h4 {
+                  text-transform: uppercase;
+                }
+              }
+
+              .card-list {
+                &__item {
+                  margin-bottom: 0.5rem;
+                }
+              }
+
+              .card-footer {
+                width: 100%;
+                a {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

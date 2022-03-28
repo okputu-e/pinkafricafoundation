@@ -1,0 +1,389 @@
+@media screen and (max-width: 47.9375rem) {
+  header {
+    .header {
+      &__inner {
+        nav {
+          padding: 0 1rem;
+          .nav {
+            &__logo {
+              width: 8rem;
+              .logo_image {
+                width: inherit;
+              }
+            }
+
+            &__menu {
+              .menu-icon {
+                display: block;
+
+                //setup and targeting the all d harmburger lines to be animated
+                //When closed
+                // &__line {
+                //   animation: closeMid 0.8s backwards;
+                //   animation-direction: reverse;
+
+                //   &::before {
+                //     animation: closeTop 0.8s backwards;
+                //     animation-direction: reverse;
+                //   }
+
+                //   &::after {
+                //     animation: closeBottom 0.8s backwards;
+                //     animation-direction: reverse;
+                //   }
+                // }
+              }
+
+              //transiton and clip path for custome animation with circle
+              .menu_items {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                text-transform: uppercase;
+                width: 100vw;
+                height: 100vh;
+                font-size: 1.5rem;
+                padding: 3rem 0;
+                background: var(--rasinblack);
+                z-index: 1;
+                transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+                clip-path: circle(0px at top right);
+
+                .menu_item {
+                  opacity: 0;
+                  transform: translateX(100%);
+                  width: 100%;
+                  text-align: center;
+
+                  a {
+                    display: block;
+                  }
+                }
+              }
+              //when harmburger is checked animated background and nav items
+              //cubic-bezier- custom easing
+              .menu-btn:checked ~ .menu_items {
+                opacity: 1;
+                clip-path: circle(100% at center);
+
+                .menu_item {
+                  opacity: 1;
+                  transform: translateX(0);
+                  transition: opacity 0.4s ease-in-out,
+                    transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                  //transition my order
+                  &:nth-of-type(1) {
+                    transition-delay: 0.6s;
+                  }
+                  &:nth-of-type(2) {
+                    transition-delay: 0.7s;
+                  }
+                  &:nth-of-type(3) {
+                    transition-delay: 0.8s;
+                  }
+                  &:nth-of-type(4) {
+                    transition-delay: 0.9s;
+                  }
+                  &:nth-of-type(5) {
+                    transition-delay: 1s;
+                  }
+                }
+              }
+
+              //Control the menu icon when it is clicked
+              //When open setup transition
+              .menu-btn:checked ~ .menu-icon {
+                border-radius: 50%;
+                animation: pulse 1s;
+
+                .menu-icon__line {
+                  animation: openMid 0.8s forwards;
+
+                  &::before {
+                    animation: openTop 0.8s forwards;
+                  }
+
+                  &::after {
+                    animation: openBottom 0.8s forwards;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        div.hero {
+          &__inner {
+            .content {
+              div.text {
+                padding: 2rem 0;
+                h1 {
+                  font-size: 2rem;
+                  font-weight: 800;
+                }
+
+                h2 {
+                  font-size: 0.7rem;
+                  line-height: 2;
+                }
+              }
+            }
+          }
+        }
+        div.main {
+          height: 500px;
+          &__slides {
+            img {
+              object-position: center center;
+            }
+          }
+          /* Caption text */
+          &__content {
+            top: 30%;
+            left: 3%;
+            width: 300px;
+
+            .content {
+              h1 {
+                font-size: 2rem;
+                font-weight: 800;
+              }
+
+              h2 {
+                font-size: 0.7rem;
+                line-height: 2;
+              }
+
+              .main_buttons {
+                margin: 2rem 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .content {
+      &__inner {
+        h3 {
+          font-size: 1.5rem;
+          padding-bottom: 20px;
+          margin-bottom: 25px;
+          margin-top: 50px;
+        }
+
+        .core_values {
+          flex-direction: column;
+        }
+        .about {
+          padding-bottom: 0;
+          flex-direction: column;
+
+          &__content {
+            padding: 0;
+          }
+        }
+
+        .events {
+          &__main {
+            flex-direction: column;
+            .event {
+              border: 1px solid var(--white);
+              width: 300px;
+              height: 300px;
+              margin: 1.5rem 0;
+            }
+          }
+        }
+
+        .volunteer {
+          h3 {
+            font-size: 1.5rem;
+          }
+          p {
+            margin: 1.5rem 0 3rem;
+            line-height: 1.6;
+          }
+        }
+        .gallery {
+          &__images {
+            grid-template-columns: 1fr;
+          }
+        }
+        .contact {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          &__form {
+            margin-bottom: 2rem;
+            .form-item {
+              width: 300px;
+            }
+          }
+          &__map {
+            .mapouter {
+              height: 300px;
+              width: 300px;
+            }
+          }
+        }
+        .donate {
+          margin-bottom: 3rem;
+          width: 100%;
+
+          &__card {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      &__inner {
+        padding: 3rem 2rem;
+        .content {
+          flex-direction: column;
+
+          .logo {
+            width: 12rem;
+          }
+
+          .social,
+          .useful-links,
+          .footer {
+            margin: 2rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-right: 0.4rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+  }
+
+  .eventModal {
+    overflow: auto;
+    &__body {
+      .event-images-video {
+        grid-template-columns: 1fr;
+
+        img,
+        iframe {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  // do something in this width range.
+  header {
+    .header {
+      &__inner {
+        nav {
+          padding: 0 2rem;
+          .nav {
+            &__menu {
+              .menu_items {
+                padding: 0 0.5rem;
+
+                .menu_item {
+                  margin: 0 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  section {
+    .content {
+      &__inner {
+        h3 {
+          padding-bottom: 20px;
+          margin-bottom: 25px;
+        }
+
+        .core_values {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .about {
+          &__content {
+            padding: 0 2rem 0 0;
+            font-weight: 400;
+
+            .about_text {
+              p {
+                line-height: 1.3rem;
+                margin: 0.2rem 0;
+              }
+              margin-bottom: 2.5rem;
+            }
+          }
+        }
+        .events {
+          &__main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .event {
+              width: 300px;
+              height: 300px;
+              margin: 1.5rem 0;
+            }
+          }
+        }
+
+        .donate {
+          margin-bottom: 3rem;
+          width: 100%;
+
+          &__card {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      &__inner {
+        padding: 3rem 0 3rem 4rem;
+        .content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          .social,
+          .useful-links,
+          .footer {
+            margin: 2rem 0;
+          }
+        }
+      }
+    }
+  }
+}

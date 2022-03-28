@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Under Construction</title>
+    <style>
+      :root {
+        --pink: #f564a9;
+        --green: #0cca4a;
+        --black: #2d2a32;
+        --white: white;
+      }
+
+      .green {
+        color: var(--green);
+      }
+
+      .pink {
+        color: var(--pink);
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100%;
+        background-color: var(--black);
+        color: var(--white);
+      }
+
+      div.wrapper {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      div.text {
+        border: 1px dotted white;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, 35%);
+      }
+
+      div.text h2 {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="text">
+        <h1 class="pink">PAF Website</h1>
+        <h2 class="green">is under construction</h2>
+        <h2 class="small">Please check back later ...</h2>
+      </div>
+    </div>
+  </body>
+</html>
